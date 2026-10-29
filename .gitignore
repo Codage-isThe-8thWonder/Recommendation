@@ -1,0 +1,84 @@
+# ===================== Secrets =====================
+.env
+.env.*
+!.env.example
+
+# ===================== dataset/ =====================
+# Saari CSVs + EDA image ignore, sirf README track hoga
+dataset/*
+!dataset/README.md
+
+# ===================== llm-modeling/ =====================
+llm-modeling/best_faiss_index.bin
+llm-modeling/llm_artifacts.pkl
+llm-modeling/llm_experiments_ablation.csv
+llm-modeling/llm_metrics.csv
+
+# ===================== memory-based/ =====================
+memory-based/best_memory_model.npz
+memory-based/memory_artifacts.pkl
+memory-based/memory_experiments_ablation.csv
+memory-based/memory_metrics.csv
+memory-based/user_item_matrix.npz
+
+# ===================== model-based/ =====================
+model-based/best_bpr_model/
+
+# ===================== Heavy files (kisi bhi folder me, future ke liye) =====================
+*.csv
+*.tsv
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.joblib
+*.bin
+
+# ===================== Model artifacts =====================
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# ===================== Vector indexes =====================
+*.faiss
+*.index
+
+# ===================== Generated images =====================
+*.png
+*.jpg
+*.jpeg
+
+# ===================== Jupyter =====================
+.ipynb_checkpoints/
+
+# ===================== Python =====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===================== Virtual environments =====================
+venv/
+.venv/
+env/
+ENV/
+
+# ===================== Logs & cache =====================
+*.log
+.cache/
+.pytest_cache/
+.mypy_cache/
+.hf_cache/
+.huggingface/
+
+# ===================== IDE / OS
