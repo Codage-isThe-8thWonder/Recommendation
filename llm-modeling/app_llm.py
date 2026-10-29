@@ -53,7 +53,7 @@ with tab1:
                 cand_str = "\n".join([f"- {c['title']}" for c in candidates])
                 prompt = f"Recommend {top_k_cold} games for someone wanting '{query}' from:\n{cand_str}\nReturn strictly a JSON array with 'title' and 'reasoning' keys."
                 try:
-                    res = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+                    res = client.models.generate_content(model="gemini-3.8-flash", contents=prompt)
                     clean = res.text.strip().replace("```json", "").replace("```", "").strip()
                     recs = json.loads(clean)
                 except Exception:
