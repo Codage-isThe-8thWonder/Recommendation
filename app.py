@@ -263,9 +263,9 @@ with tab1:
 
         # 3. LLM Pipeline (Manual Button Control)
         with col3:
-            st.warning("### 3. LLM Pipeline (Ours)")
+            st.warning("### 3. LLM Pipeline")
             st.caption("FAISS Dense Vector + Gemini Reasoning")
-            st.write("API calls aur rate limit bachane ke liye LLM manually run hoga.")
+            st.write("To save API calls and rate limit .")
 
             if st.button("🚀 Run LLM Recommender", key="btn_run_llm"):
                 if faiss_index is not None:
@@ -335,7 +335,7 @@ Select top 5 games and return strictly a raw JSON array (no markdown code blocks
 """
                     try:
                         res = gemini_client.models.generate_content(
-                            model="gemini-2.5-flash",
+                            model="gemini-3.8-flash",
                             contents=prompt
                         )
                         clean = res.text.strip().replace("```json", "").replace("```", "").strip()
